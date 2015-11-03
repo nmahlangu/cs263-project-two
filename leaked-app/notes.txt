@@ -1,0 +1,21 @@
+Setup dynamically linked directories
+====================================
+1)  ln -sf libaes.so.1.0 libaes.so.1
+2) ln -sf libpassdb.so.1.0 libpassdb.so.1
+3) export LD_LIBRARY_PATH=.
+
+
+Tools to help project
+=====================
+- Browser-side debugger: https://developer.mozilla.org/en-US/docs/Tools/Debugger
+    - Pretty print minified JavaScript: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file
+- Hardware Watchpoints: https://sourceware.org/gdb/onlinedocs/gdb/Set-Watchpoints.html
+    - For example, using an rwatch command, you can cause the program to break 
+      when a particular memory location is read. Similarly, a watch statement 
+      will inform you whenever a particular memory location is written. You can 
+      tell if your machine supports hardware-based watchpoints by issuing this 
+      command from gdb: (gdb) show can-use-hw-watchpoints
+- Note that Proton detaches itself from the console and runs in the background as a 
+  daemon. So, as you run your experiments, you may need to check whether an 
+  old copy of Proton is running before starting a new one. You can do a "pkill proton" to kill any old copy.
+
