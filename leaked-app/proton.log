@@ -1,0 +1,96 @@
+ INFO: proton starting:8080:23080
+ INFO: proton starting:8080:23082
+ERROR: system call:bind Errno=98 exiting pid=23082
+ INFO: proton starting:8080:23084
+ERROR: system call:bind Errno=98 exiting pid=23084
+ INFO: proton starting:8080:23086
+ERROR: system call:bind Errno=98 exiting pid=23086
+ INFO: proton starting:8080:23088
+ERROR: system call:bind Errno=98 exiting pid=23088
+ INFO: proton starting:8080:23090
+ERROR: system call:bind Errno=98 exiting pid=23090
+ INFO: request:GET /home.html HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8**Upgrade-Insecure-Requests: 1**User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:1
+ INFO: SEND:home.html:1
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 858
+Connection: close
+Content-Type: text/html
+
+:1
+ INFO: request:GET /ext-all.css HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: text/css,*/*;q=0.1**User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:2
+ INFO: SEND:ext-all.css:2
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 206733
+Connection: close
+Content-Type: text/css
+
+:2
+ INFO: request:GET /home.css HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: text/css,*/*;q=0.1**User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:3
+ INFO: SEND:home.css:3
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 1489
+Connection: close
+Content-Type: text/css
+
+:3
+ INFO: request:GET /bootstrap.js HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: */***User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:4
+ INFO: SEND:bootstrap.js:4
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 1792
+Connection: close
+Content-Type: application/javascript
+
+:4
+ INFO: request:GET /home.js HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: */***User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:5
+ INFO: SEND:home.js:5
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 4435
+Connection: close
+Content-Type: application/javascript
+
+:5
+ INFO: request:GET /chatmax-min.js HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: */***User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:6
+ INFO: SEND:chatmax-min.js:6
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 3641
+Connection: close
+Content-Type: application/javascript
+
+:6
+ INFO: request:GET /ext-all.js HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: */***User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:7
+ INFO: SEND:ext-all.js:7
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 1051657
+Connection: close
+Content-Type: application/javascript
+
+:7
+ INFO: request:GET /background.jpg HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: image/webp,image/*,*/*;q=0.8**User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:8
+ INFO: SEND:background.jpg:8
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 166206
+Connection: close
+Content-Type: image/jpg
+
+:8
+ INFO: request:GET /resources/themes/images/default/tools/tool-sprites.gif HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: image/webp,image/*,*/*;q=0.8**User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/ext-all.css**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:9
+NOT FOUND: Failed to open file:resources/themes/images/default/tools/tool-sprites.gif
+ INFO: request:GET /resources/themes/images/default/form/text-bg.gif HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**Accept: image/webp,image/*,*/*;q=0.8**User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**DNT: 1**Referer: http://172.16.89.128:8080/ext-all.css**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:10
+NOT FOUND: Failed to open file:resources/themes/images/default/form/text-bg.gif
+ INFO: request:GET /favicon.ico HTTP/1.1**Host: 172.16.89.128:8080**Connection: keep-alive**User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36**Accept: */***DNT: 1**Referer: http://172.16.89.128:8080/home.html**Accept-Encoding: gzip, deflate, sdch**Accept-Language: en-US,en;q=0.8****:11
+ INFO: SEND:favicon.ico:11
+ INFO: Header:HTTP/1.1 200 OK
+Server: proton/23.0
+Content-Length: 1334
+Connection: close
+Content-Type: image/ico
+
+:11
