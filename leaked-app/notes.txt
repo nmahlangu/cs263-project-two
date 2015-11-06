@@ -88,8 +88,10 @@ Exercise 1 Notes
 Exercise 2
 ===========
 - Dictionary attack using GET requests
-- Username: root, Password: bond007
-- Username: 
+- Password for username root is bond007
+- Password for username karp is 123456
+- Password for username semeiology is firebird
+- Password for username consubstant is jackson
 	
 
 
