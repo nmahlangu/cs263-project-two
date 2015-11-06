@@ -1,0 +1,24 @@
+Key
+====
+3b99c216f1ae2dd69b70f5e800fc9aec
+
+Key Discovery
+=============
+1) Ran readelf -a libpassdb.so.1 and found the line: 
+    37: 0000204c    16 OBJECT  LOCAL  DEFAULT   22 key
+   This told me there was some variable named `key` at offset
+   0000204c in whatever segment of memory it was in.
+
+2) Ran objdump -t libpassdb.so.1 and found the line:
+    line: 0000204c l     O .data  00000010              key
+   This told me that variable `key` was in the data segment of memory.
+
+3) Ran readelf -x .data libpassdb.so.1 and found the lines:
+    0x00002048 48200000 3b99c216 f1ae2dd6 9b70f5e8 H ..;.....-..p..
+    0x00002058 00fc9aec                            ....
+   Since the offset of `key` is 0000204c, this told me the key
+   was the blocks 3b99c216 f1ae2dd6 9b70f5e8 00fc9aec
+
+4) Using the online decryption tool at http://aes.online-domain-tools.com/,
+   I uploaded the key and password.db and was able to a file which
+   showed usernames in plaintext (ex1-plaintext-password-table.txt)
