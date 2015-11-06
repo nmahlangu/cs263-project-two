@@ -1,3 +1,8 @@
+# Dependencies are the following files:
+# 	- john.txt 	    (dictionary of passwords)
+#	- usernames.txt (list of usernames to crack passwords for)
+# These files need to be in the same directory
+
 import requests
 import random
 import sys
