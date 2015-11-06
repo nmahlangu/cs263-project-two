@@ -83,11 +83,13 @@ Exercise 1 Notes
 	  bytes long. 
 	- key is 3b99c216f1ae2dd69b70f5e800fc9aec
 - 4) Decrypt using http://aes.online-domain-tools.com/
-- 5) 
+- 5) File is decrypted_passworddb.bin
 
 Exercise 2
 ===========
-- Dictionary attack using get requests
+- Dictionary attack using GET requests
+- Username: root, Password: bond007
+- Username: 
 	
 
 
